@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Img from "gatsby-image"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -26,7 +28,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title="All posts" />
-      <Bio />
+       <Bio /> 
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
@@ -54,6 +56,20 @@ const BlogIndex = ({ data, location }) => {
                     itemProp="description"
                   />
                 </section>
+             <div>
+             {
+  post.frontmatter.featured && (
+    <Img
+      fluid={post.frontmatter.featured.childImageSharp.fluid}
+      alt={post.frontmatter.title}
+    />
+  )
+}
+               
+               </div>   
+               
+
+
               </article>
             </li>
           )
@@ -66,24 +82,32 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
+query {
+  site {
+    siteMetadata {
+      title
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
+  }
+  allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    nodes {
+      excerpt
+      fields {
+        slug
+      }
+      frontmatter {
+        date(formatString: "MMMM DD, YYYY")
+        title
+        description
+        featured {
+          childImageSharp{
+          fluid(maxWidth:750){
+            ...GatsbyImageSharpFluid
+          }
+            
+          }
         }
       }
     }
   }
+}
 `
