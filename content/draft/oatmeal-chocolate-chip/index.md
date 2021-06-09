@@ -6,3 +6,4 @@ featured: ./single.JPG
 
 ---
 
+![Look at all of those M&M cookies](./plate.JPG)
