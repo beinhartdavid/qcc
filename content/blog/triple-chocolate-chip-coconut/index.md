@@ -6,4 +6,4 @@ featured: ./single.PNG
 
 ---
 
-![Look at all of those M&M cookies](./plate.JPG)
+![Look at all of those triple chocolate chip cookies](./plate.JPG)

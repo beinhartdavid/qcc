@@ -6,4 +6,4 @@ featured: ./single.PNG
 
 ---
 
-![Look at all of those M&M cookies](./S'mores.JPG)
+![Look at all of those S'mores cookies](./S'mores.JPG)

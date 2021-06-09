@@ -4,8 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -59,10 +58,11 @@ const BlogIndex = ({ data, location }) => {
              <div>
              {
   post.frontmatter.featured && (
-    <Img
-      fluid={post.frontmatter.featured.childImageSharp.fluid}
-      alt={post.frontmatter.title}
-    />
+    
+      <GatsbyImage image={post.frontmatter.featured.childImageSharp.gatsbyImageData} /> 
+      //fluid={post.frontmatter.featured.childImageSharp.fluid}
+      //alt={post.frontmatter.title}
+    
   )
 }
                
@@ -100,9 +100,11 @@ query {
         description
         featured {
           childImageSharp{
-          fluid(maxWidth:750){
-            ...GatsbyImageSharpFluid
-          }
+            gatsbyImageData(
+              width: 350
+              layout: FIXED
+              )
+          
             
           }
         }
