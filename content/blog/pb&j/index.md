@@ -6,4 +6,4 @@ featured: ./pb&j-single.PNG
 
 ---
 
-![Look at all of those PB&J cookies!](./pb&j-plate.JPG)
+![Look at all of those PB&J cookies!](./plate.PNG)
