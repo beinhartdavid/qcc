@@ -2,8 +2,8 @@
 title: M&M
 date: "2020-07-24T22:12:03.284Z"
 description: ""
-featured: ./single.PNG
+featured: ./M&M-single.PNG
 
 ---
 
-![Look at all of those M&M cookies](./M&M.JPG)
+![Look at all of those M&M cookies](./M&M-plate.JPG)

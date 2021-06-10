@@ -101,7 +101,7 @@ query {
         featured {
           childImageSharp{
             gatsbyImageData(
-              width: 350
+              width: 300
               layout: FIXED
               )
           
