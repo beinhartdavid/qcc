@@ -58,10 +58,13 @@ const BlogIndex = ({ data, location }) => {
              <div>
              {
   post.frontmatter.featured && (
-    
+    <Link to={post.fields.slug} itemProp="url">
+                      
+                    
       <GatsbyImage image={post.frontmatter.featured.childImageSharp.gatsbyImageData} /> 
-      //fluid={post.frontmatter.featured.childImageSharp.fluid}
-      //alt={post.frontmatter.title}
+
+      </Link>
+      
     
   )
 }

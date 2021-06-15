@@ -3,12 +3,12 @@ module.exports = {
     title: `QCC`,
     author: {
       name: `Lisa Murphy`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: ``,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `a place to document cookies`,
+    siteUrl: `https://qcccookies.com`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [
