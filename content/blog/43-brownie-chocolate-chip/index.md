@@ -6,3 +6,4 @@ featured: brownie-stuffed-chocolate-chip-single.jpg
 ---
 
 ![Look at all of those Brownie Stuffed Chocolate Chip Cookies!](./brownie-stuffed-chocolate-chip-plate.jpg)
+
